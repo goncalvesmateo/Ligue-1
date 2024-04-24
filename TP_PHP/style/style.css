@@ -1,0 +1,169 @@
+/* Variables prédéfinies */
+:root {
+    --police-ecriture: 'TW Cen MT';
+    --form-align: 42%;
+    --content-align: 15px;
+}
+
+/* Style de tout le site */
+html {
+    font-family: var(--police-ecriture);
+    overflow-x: hidden;
+}
+
+.alert {
+    color: red;
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.img_select {
+    text-align: center;
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: rgb(134, 134, 255); /* Couleur de fond du header */
+    font-family: var(--police-ecriture);
+    width: 100%; /* Largeur de l'en-tête */
+    padding: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header_title td {
+    color: white; /* Couleur du texte du header */
+    font-size: 45px; /* Taille du texte */
+}
+
+.header_link td {
+    font-size: 30px; /* Taille du texte */
+    padding-right: 15px;
+}
+
+/* Style du corps de la page */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+    margin-left: var(--content-align);
+}
+
+p {
+    margin-left: var(--content-align);
+    margin-right: var(--content-align);
+    text-align: justify;
+}
+
+input {
+    margin-left: var(--content-align);
+    margin-right: var(--content-align);
+    margin-bottom: 10px;
+}
+
+.bouton-radio {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ajoutez cette ligne pour centrer verticalement */
+}
+
+.bouton input, button {
+    margin-left: var(--content-align);
+    margin-right: var(--content-align);
+    font-size: 25px;
+    font-family: var(--police-ecriture);
+    color: black;
+    background-color: white;
+    border-color: blue;
+    border-radius: 10px;
+}
+
+.bouton input:hover, button:hover {
+    background-color: #ccc;
+}
+
+.champ-saisie {
+    text-align: right;
+}
+
+.label {
+    text-align: left;
+    padding-right: 10px; /* Espace entre le texte et le champ de saisie */
+}
+
+.formulaire {
+    font-family: var(--police-ecriture);
+    display: flex;
+    justify-content: space-between; /* Pour aligner à gauche et à droite */
+    align-items: center; /* Pour centrer verticalement */
+    margin-bottom: 10px; /* Ajoute un espace entre les éléments du formulaire */
+}
+
+.formulaire input, select {
+    display: flex;
+    align-self: right;
+    margin: 0 auto;
+}
+
+.list {
+    font-family: var(--police-ecriture);
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto; /* 'auto' permet de centrer horizontalement */
+}
+
+.formulaire input:valid {
+    border: 2px solid rgb(98, 157, 82);
+}
+
+/* Styles de la page clubs */
+.table_club {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.table_club td {
+    padding: 5px;
+}
+
+.clubrow1 {
+    background-color: rgb(92, 92, 200);
+    color: white;
+}
+
+.clubrow2 {
+    background-color: rgb(201, 201, 238);
+}
+
+.commentInput {
+    width: 98%;
+    height: 50px;
+}
+
+#teachable-model-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
