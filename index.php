@@ -39,7 +39,7 @@
 
     $router = new Router();
 
-    $router->addRoute("/", "index.php");
+    $router->addRoute("/accueil", "view/accueil.php");
     $router->addRoute("/clubs", "controller/c_club.php");
     $router->addRoute("/inscription", "controller/c_inscription.php");
     $router->addRoute("/gestionmdp", "view/gestionMDP.php");
@@ -50,4 +50,10 @@
     $_SERVER["REQUEST_URI"];
 
     $router->execute($_SERVER["REQUEST_URI"]);
+
+    $current_url = $_SERVER['REQUEST_URI'];
+    if ($current_url == '/index.php') {
+        header('Location: /accueil');
+        exit();
+    }
 ?>
