@@ -29,7 +29,6 @@
             </tr>
         </table>
     </header>
-    <body></body>
 </html>
 
 <?php
