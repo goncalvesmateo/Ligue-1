@@ -16,7 +16,16 @@
                 <td><a href="/">Accueil</a></td>
                 <td><a href="/clubs">Clubs</a></td>
                 <td><a href="/article">Article</a></td>
-                <td><a href="/inscription">Inscription</a></td>
+                <?php
+                session_start();
+
+                if (isset($_SESSION['id'])) {
+                    echo "<td><a href='/deconnexion'>Déconnexion</a></td>";
+                } else {
+                    echo "<td><a href='/inscription'>Inscription</a></td>";
+                    echo "<td><a href='/connexion'>Connexion</a></td>";
+                }
+                ?>
             </tr>
         </table>
     </header>
@@ -35,6 +44,8 @@
     $router->addRoute("/inscription", "controller/c_inscription.php");
     $router->addRoute("/gestionmdp", "view/gestionMDP.php");
     $router->addRoute("/article", "controller/c_article.php");
+    $router->addRoute("/connexion", "controller/c_connexion.php");
+    $router->addRoute("/deconnexion", "controller/c_deconnexion.php");
 
     $_SERVER["REQUEST_URI"];
 

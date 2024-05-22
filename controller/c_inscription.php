@@ -23,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql = "INSERT INTO utilisateur (id_club, nom_uti, prenom_uti, mail_uti, password_uti, sexe_uti, image_uti) VALUES (:idclub, :nom, :prenom, :mail, :mdp, :sexe, :image)";
         $requete = $pdo->prepare($sql);
 
-        $mdp = base64_encode($mdp);
         $image64 = base64_encode($image64);
 
         // Lie les valeurs aux paramètres de la requête.

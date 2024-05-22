@@ -8,8 +8,15 @@
     </head>
     <body>
         <form method="post">
-            <input type="text" id="saisie" name="saisie" class="commentInput" placeholder="Rédiger un commentaire" required>
-            <button type="commentsubmit" name="commentsubmit">Publier</input>
+            <?php
+            if(isset($_SESSION['id'])) {
+                echo '<input type="text" id="saisie" name="saisie" class="commentInput" placeholder="Commentaire" required>';
+                echo '<button type="commentsubmit" name="commentsubmit">Publier</input>';
+            } else {
+                echo "<h2>Veuillez vous connecter pour publier un commentaire.</h2>";
+            }
+
+            ?>
         </form>
     </body>
 </html>

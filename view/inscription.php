@@ -23,19 +23,50 @@
                 <div class="formulaire">
                     <input type="text" id="mdp" name="mdp" placeholder="Mot de passe" required>
                 </div>
+                <div class="formulaire">
+                    <input type="text" id="codepostal" name="codepostal" placeholder="Code Postal" oninput="listerCommunes()" required>
+                </div>
 
-                <select class="list" id="list" name="list">
-                    <?php
-                        require_once('model/dbconnect.php');
+                <div class="formulaire">
+                    <select class="list" id="list" name="list">
+                        <script>
+                            function listerCommunes() {
+                                var codepostal = document.getElementById("codepostal").value;
 
-                        $query = "SELECT id_club, nom_club FROM club";
-                        $result = $pdo->query($query);
-                        
-                        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<option value=\"" . $row['id_club'] . "\">" . $row['nom_club'] . "</option>";
-                        }
-                    ?>
-                </select>
+                                var xhr = new XMLHttpRequest();
+                                xhr.responseType = 'json';
+                                xhr.open('GET', "https://geo.api.gouv.fr/communes?codePostal=" + codepostal);
+                                xhr.send();
+
+                                xhr.onload = function () {
+                                    var communeJSON = xhr.response;
+                                    var selectElement = document.getElementById("list");
+                                    selectElement.innerHTML = ""; // Effacer les options existantes avant de mettre à jour
+                                    for (var i = 0; i < communeJSON.length; i++) {
+                                        var optionElement = document.createElement("option");
+                                        optionElement.textContent = communeJSON[i]["nom"];
+                                        selectElement.appendChild(optionElement);
+                                    }
+                                };
+                            }
+                        </script>
+                    </select>
+                </div>
+
+                <div class="formulaire">
+                    <select class="list" id="list" name="list">
+                        <?php
+                            require_once('model/dbconnect.php');
+
+                            $query = "SELECT id_club, nom_club FROM club";
+                            $result = $pdo->query($query);
+                            
+                            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                echo "<option value=\"" . $row['id_club'] . "\">" . $row['nom_club'] . "</option>";
+                            }
+                        ?>
+                    </select>
+                </div>
             </div>
 
             <h2>Sexe</h2>

@@ -120,8 +120,7 @@ INSERT INTO club VALUES
 INSERT INTO utilisateur (id_club, nom_uti, prenom_uti, mail_uti, password_uti, sexe_uti, image_uti) VALUES
 (1, 'Dupont', 'Jean', 'dupont.jean@freee.fr', 'p@ssw0rd1dEux3', 'Homme', 'cHhBcnQucG5n'),
 (1, 'Michelle', 'Anne-Marie', 'annmarie.michelle@gemail.com', 'p@ssw0rd1dEux3', 'Femme', 'MzY0MTM5MC5wbmc='),
-(1, 'Terrieur', 'Alain', 'alain.terrieur@yeahoo.fr', 'p@ssw0rd1dEux3', 'Homme', 'MDhmMGVjOWYzOGYzNzZkMzg0ZDlkZGFmZDNlNTc0ZDIuanBn'),
-(1, 'dev', 'root', 'dev.root@index.php', 'p@ssw0rd1dEux3', 'Autre', 'cHhBcnQucG5n');
+(1, 'Terrieur', 'Alain', 'alain.terrieur@yeahoo.fr', 'p@ssw0rd1dEux3', 'Homme', 'MDhmMGVjOWYzOGYzNzZkMzg0ZDlkZGFmZDNlNTc0ZDIuanBn');
 
 INSERT INTO NEWS (id_club, titre_news, article_news) VALUES
 (1, 'Le PSG en quête de son huitième titre consécutif', 'Le Paris Saint-Germain, qui domine la Ligue 1 depuis plusieurs saisons, est bien parti pour décrocher son huitième titre consécutif. Avec une attaque explosive menée par Kylian Mbappé et Neymar, le PSG impressionne. Cependant, des blessures récentes pourraient mettre en jeu la profondeur de leur effectif, offrant ainsi un espoir à leurs rivaux.');

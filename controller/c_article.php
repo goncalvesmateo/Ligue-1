@@ -68,8 +68,9 @@ if (isset($_POST['commentsubmit'])) {
 
     // Vérifie que les clés nécessaires sont définies
     if ($saisie !== null && !empty($saisie)) {
+        // Remplacez les valeurs de id_news et id_uti par les valeurs appropriées
         $id_news = 1;
-        $id_uti = 4;
+        $id_uti = $_SESSION['id'];
 
         $sql = "INSERT INTO commentaire (id_news, id_uti, desc_com) VALUES (:id_news, :id_uti, :saisie);";
         $requete = $pdo->prepare($sql);
