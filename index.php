@@ -13,7 +13,7 @@
         </table>
         <table border="0" class="header_link">
             <tr>
-                <td><a href="/">Accueil</a></td>
+                <td><a href="/accueil">Accueil</a></td>
                 <td><a href="/clubs">Clubs</a></td>
                 <td><a href="/article">Article</a></td>
                 <?php
@@ -29,9 +29,7 @@
             </tr>
         </table>
     </header>
-    <body>
-        <h1>Bienvenue sur le site Ligue 1 !</h1>
-    </body>
+    <body></body>
 </html>
 
 <?php
