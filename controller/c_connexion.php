@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($requete->rowCount() == 1) {
                 // L'utilisateur est authentifié avec succès
                 $_SESSION['id'] = $userRow['id_uti'];
-                header("Location: /");
+                header("Location: /accueil");
                 exit();
             } else {
                 echo "Nom d'utilisateur ou mot de passe incorrect.";
